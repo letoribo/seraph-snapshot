@@ -87,7 +87,7 @@ For example, for the database given in the snapshot.json example, this function 
 return:
 
 ```cypher
-CREATE (node0:`car` {make:"Citroen",model:"DS4",year:2011}),(node1:`person` {name:"Jon Packer",age:26}),node0-[rel2:`OWNS` {for:"3 years"}]->node1
+CREATE (node0:`car` {make:"Citroen",model:"DS4",year:2011}),(node1:`person` {name:"Jon Packer",age:26}),(node0)-[rel2:`OWNS` {for:"3 years"}]->(node1)
 ```
 
 ### snapshot.jsonToCypher(json, stepSize)
